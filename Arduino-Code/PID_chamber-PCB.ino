@@ -58,10 +58,10 @@ double humidityVal;
 int PWMOn  = 255;   // PWM pulse duty cicles (ON)
 int PWMOff  = 0;    // (OFF)
 boolean flag = false;      // Activation/enable flag (for STOPPING conversion routine)
-boolean enterFlag = false;
-boolean paramChange = false;
+boolean enterFlag = false;  // Indicates if the user saved the selected value by pressing the same button
+boolean paramChange = false; // Indicates if the value has changed or not
 //unsigned long previousTime = 0;   // Used for timing purposes
-const int    SAMPLE_NUMBER  = 10; // Capture samples to avoid noise
+const int    SAMPLE_NUMBER  = 20; // Capture samples to avoid noise
 double currentTemperature;    // save the current temperature
 /* In order to use the Beta equation, we must know our other resistor
    within our resistor divider. If you are using something with large tolerance,
@@ -142,7 +142,7 @@ void setup() {
   //Serial.begin(115200);
   lcd.begin(20, 4);// initialize the lcd for 20 chars 4 lines
   lcd.backlight(); // backlight on
-  lcd.clear();
+  lcd.clear(); // clean the display
   lcd.createChar(0, degreesSymbol);
   lcd.createChar(1, separatorSymbol);
   lcd.setCursor(0, 0);
@@ -153,7 +153,7 @@ void setup() {
   for (int i = 0; i < 20; i++) {
     lcd.setCursor(i, 3);
     lcd.print(".");
-    delay(50);
+    delay(60);
   }
 
   lcd.clear();
@@ -580,7 +580,7 @@ void setpointValue(int mode) {
     newSetpoint = oldSetpoint;
   }
 }
-
+// Read the value coming from the encoder and increase the value of the counter
 double readEncoder() {
   static int pos = 0;
   counter = encoder.getPosition();
@@ -591,8 +591,8 @@ double readEncoder() {
 }
 
 double readThermistorADC() { // for InputPID
+ 
   // variables that live in this function
-
   adcAverage  = 0;            // Holds the average voltage measurement
 
   int    adcSamples[SAMPLE_NUMBER];  // Array to hold each voltage measurement
