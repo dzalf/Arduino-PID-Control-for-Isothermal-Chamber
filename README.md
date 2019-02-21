@@ -38,6 +38,13 @@ e. The Peltier cooler originally used can be found [here](https://uk.farnell.com
 
 f. The classic DHT22 humidity sensor was used. I don't add a link becuase you knoiw where to find them. They are E V E R Y W H E R E!
 
+g. An acrylic and very nice enclosure like [this](https://www.ebay.co.uk/itm/16x2-LCD-enclosure-project-case-for-Arduino-UNO-Mega/123619112058?hash=item1cc845f47a:m:mFUGjGyyk3o-kx1YDJItiUA:rk:1:pf:1&frcectupt=true) was used.
+
+The front panel looks like this:
+
+![alt txt](https://github.com/dzalf/Arduino-PID-Control-for-Isothermal-Chamber/blob/master/PCB-files/frontPanel.jpg)
+
+
 **#TODO**
 
 1. Upload a clear schematic for the keyboard. However the pinout can be extracted from the code
