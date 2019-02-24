@@ -42,7 +42,7 @@ g. An acrylic and very nice enclosure like [this](https://www.ebay.co.uk/itm/16x
 
 The front panel looks like this:
 
-![alt txt](https://github.com/dzalf/Arduino-PID-Control-for-Isothermal-Chamber/blob/master/PCB-files/frontPanel.jpg)
+![alt txt](https://github.com/dzalf/Arduino-PID-Control-for-Isothermal-Chamber/blob/master/PCB-files/lateral_view.jpg)
 
 
 **#TODO**
