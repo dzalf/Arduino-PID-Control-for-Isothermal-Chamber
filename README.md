@@ -44,6 +44,8 @@ The front panel looks like this:
 
 ![alt txt](https://github.com/dzalf/Arduino-PID-Control-for-Isothermal-Chamber/blob/master/PCB-files/lateral_view.jpg)
 
+**NOTE:** That *nan* from the humidity sensor was simply a bug that I promptly solved
+
 
 **#TODO**
 
